@@ -4,6 +4,8 @@ from django.shortcuts import render
 # Create your views here.
 def index(request):
     # -----中间放调用接口获得参数-------
+
+
     # -----中间放调用接口获得参数-------
 
     #直接返回一段文字
