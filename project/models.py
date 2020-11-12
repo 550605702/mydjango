@@ -9,7 +9,6 @@ from django.db import models
 
 
 class Fulltext(models.Model):
-    id = models.IntegerField(primary_key=True)
     uid = models.IntegerField()
     fulltext = models.CharField(db_column='fullText', max_length=255, blank=True, null=True)  # Field name made lowercase.
     time = models.DateTimeField(blank=True, null=True)
@@ -21,7 +20,6 @@ class Fulltext(models.Model):
 
 
 class Paragraphtext(models.Model):
-    id = models.IntegerField(primary_key=True)
     textid = models.IntegerField(db_column='textId')  # Field name made lowercase.
     paragraph = models.CharField(max_length=255, blank=True, null=True)
     repeat = models.CharField(max_length=255, blank=True, null=True)
@@ -33,7 +31,6 @@ class Paragraphtext(models.Model):
 
 
 class User(models.Model):
-    id = models.IntegerField(primary_key=True)
     username = models.CharField(max_length=255, blank=True, null=True)
     password = models.CharField(max_length=255, blank=True, null=True)
 

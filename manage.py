@@ -2,12 +2,15 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-
+# Create your tests here.
+# 设置Django运行所依赖的环境
 
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mydjango.settings')
+
     try:
+
         from django.core.management import execute_from_command_line
     except ImportError as exc:
         raise ImportError(
